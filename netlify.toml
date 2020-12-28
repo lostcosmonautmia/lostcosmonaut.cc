@@ -1,0 +1,5 @@
+[[redirects]]
+  from   = "https://lostcosmonaut-cc.netlify.com/*"
+  to     = "https://lostcosmonaut.cc/:splat"
+  status = 301
+  force  = true
