@@ -1,0 +1,21 @@
+{
+  "name": "lostcosmonaut.cc",
+  "private": true,
+  "description": "Source code repository for the Lost Cosmonaut website.",
+  "homepage": "https://github.com/lostcosmonautmia/lostcosmonaut.cc",
+  "bugs": {
+    "url": "https://github.com/lostcosmonautmia/lostcosmonaut.cc/issues"
+  },
+  "license": "CC-BY-NC-SA-4.0",
+  "author": {
+    "name": "Jason Garber",
+    "url": "https://sixtwothree.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lostcosmonautmia/lostcosmonaut.cc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
