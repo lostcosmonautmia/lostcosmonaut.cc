@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  background: #111;
+  background-image: radial-gradient(circle at top, #333, transparent 75%, #000);
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 3rem;
+}
+
+a {
+  display: block;
+  margin: 0 auto;
+  max-width: 18rem;
+}
+
+img {
+  -ms-interpolation-mode: bicubic;
+  width: 100%;
+}
