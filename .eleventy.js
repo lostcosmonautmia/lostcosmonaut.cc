@@ -1,4 +1,4 @@
-module.exports = function (eleventy) {
+module.exports = eleventy => {
   eleventy.setBrowserSyncConfig(require('./bs-config.js'));
 
   eleventy.addPassthroughCopy('./src/assets');
