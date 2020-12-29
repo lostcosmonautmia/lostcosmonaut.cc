@@ -1,6 +1,10 @@
 {
   "name": "Lost Cosmonaut",
+  "tagline": "Musical Instrument Accessories",
   "description": "Musical Instrument Accessories designed and built in Virginia since 2020.",
   "url": "https://lostcosmonaut.cc",
-  "theme_color": "#111"
+  "theme_color": "#111",
+  "profiles": {
+    "instagram": "https://instagram.com/lostcosmonautmia"
+  }
 }
