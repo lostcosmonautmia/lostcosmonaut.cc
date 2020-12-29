@@ -14,7 +14,6 @@ module.exports = eleventy => {
   return {
     dir: {
       input: './src',
-      layouts: '_layouts',
       output: './public'
     }
   };
