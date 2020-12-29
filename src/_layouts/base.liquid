@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+
+  {% capture page_title -%}
+    {%- if title -%}
+      {{ title }} — {{ site.name }}
+    {%- else -%}
+      {{ site.name }} — Musical Instrument Accessories
+    {%- endif -%}
+  {% endcapture -%}
+
+  <title>{{ page_title }}</title>
+
+  <meta name="apple-mobile-web-app-title" content="{{ site.name }}">
+  <meta name="application-name" content="{{ site.name }}">
+  <meta name="description" content="{{ site.description }}">
+  <meta name="theme-color" content="{{ site.theme_color }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" property="og:description" content="{{ site.description }}">
+  <meta name="twitter:image" property="og:image" content="{{ site.url }}/assets/images/icon-512x512.png">
+  <meta name="twitter:title" property="og:title" content="{{ page_title }}">
+  <meta name="twitter:url" property="og:url" content="{{ site.url }}">
+
+  <link rel="apple-touch-icon" href="/assets/images/icon-512x512.png">
+  <link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="shortcut icon" href="/assets/images/icon-512x512.png">
+  <link rel="source" href="https://github.com/lostcosmonautmia/lostcosmonaut.cc">
+  <link rel="stylesheet" href="/assets/stylesheets/application.css">
+</head>
+<body>
+
+  {{ content }}
+
+</body>
+</html>

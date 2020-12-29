@@ -1,6 +1,9 @@
+---
+permalink: /manifest.webmanifest
+---
 {
-  "short_name": "Lost Cosmonaut",
-  "name": "Lost Cosmonaut",
+  "short_name": "{{ site.name }}",
+  "name": "{{ site.name }}",
   "icons": [
     {
       "src": "/assets/images/icon-256x256.png",
@@ -19,7 +22,7 @@
     }
   ],
   "start_url": "/",
-  "background_color": "#111",
-  "theme_color": "#111",
+  "background_color": "{{ site.theme_color }}",
+  "theme_color": "{{ site.theme_color }}",
   "display": "minimal-ui"
 }

@@ -8,6 +8,7 @@ module.exports = function (eleventy) {
   return {
     dir: {
       input: './src',
+      layouts: '_layouts',
       output: './public'
     }
   };
