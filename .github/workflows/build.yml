@@ -20,6 +20,6 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - run: |
-          npm ci
-          npm run build
+      - run: npm ci
+      - run: npm run build
+      - run: test -f ./public/index.html

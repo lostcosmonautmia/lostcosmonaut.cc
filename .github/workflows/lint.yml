@@ -20,9 +20,8 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - run: |
-          npm ci
-          npm run lint:scripts
+      - run: npm ci
+      - run: npm run lint:scripts
 
   lint-styles:
     name: Lint CSS files with stylelint
@@ -38,6 +37,5 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - run: |
-          npm ci
-          npm run lint:styles
+      - run: npm ci
+      - run: npm run lint:styles
