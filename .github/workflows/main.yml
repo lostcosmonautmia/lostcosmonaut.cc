@@ -1,12 +1,10 @@
 name: Lint and Build site
 
 on:
+  pull_request:
   push:
     branches-ignore:
       - production
-
-env:
-  SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 
 jobs:
   lint:
@@ -29,11 +27,6 @@ jobs:
       - name: Run lint tasks
         id: npm-run-lint
         run: npm run lint
-      - uses: act10ns/slack@v1
-        with:
-          status: ${{ job.status }}
-          steps: ${{ toJson(steps) }}
-        if: always()
 
   build:
     name: Build site
@@ -58,8 +51,3 @@ jobs:
       - name: Test built site
         id: test-built-site
         run: test -f ./public/index.html
-      - uses: act10ns/slack@v1
-        with:
-          status: ${{ job.status }}
-          steps: ${{ toJson(steps) }}
-        if: always()
