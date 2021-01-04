@@ -13,10 +13,6 @@ jobs:
     name: Lint JavaScript and stylesheets
     runs-on: ubuntu-16.04
     steps:
-      - uses: act10ns/slack@v1
-        with:
-          status: ${{ job.status }}
-        if: always()
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
@@ -43,10 +39,6 @@ jobs:
     name: Build site
     runs-on: ubuntu-16.04
     steps:
-      - uses: act10ns/slack@v1
-        with:
-          status: ${{ job.status }}
-        if: always()
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
