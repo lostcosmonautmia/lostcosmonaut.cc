@@ -52,5 +52,6 @@ workflows:
       - lint:
           filters: *filters
       - test:
-          requires: build
+          requires:
+            - build
           filters: *filters
