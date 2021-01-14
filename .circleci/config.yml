@@ -1,0 +1,20 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@4.1.0
+
+jobs:
+  lint:
+    executor:
+      name: node/default
+      tag: 14.15.3
+    steps:
+      - checkout
+      - node/install-packages
+      - npm run lint
+
+workflows:
+  version: 2
+  default:
+    jobs:
+      - lint
