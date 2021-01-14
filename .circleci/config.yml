@@ -47,10 +47,10 @@ workflows:
   version: 2
   default:
     jobs:
-      build:
-        filters: *filters
-      lint:
-        filters: *filters
-      test:
-        requires: build
-        filters: *filters
+      - build:
+          filters: *filters
+      - lint:
+          filters: *filters
+      - test:
+          requires: build
+          filters: *filters
