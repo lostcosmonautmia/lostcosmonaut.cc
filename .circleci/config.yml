@@ -3,11 +3,30 @@ version: 2.1
 orbs:
   node: circleci/node@4.1.0
 
+references:
+  executor: &executor
+    name: node/default
+    tag: 14.15.3
+  filters: &filters
+    branches:
+      ignore: production
+
 jobs:
+  build:
+    <<: *executor
+    steps:
+      - checkout
+      - node/install-packages
+      - run:
+          name: Run build task
+          command: npm run build
+      - persist_to_workspace:
+          root: ~/project
+          paths:
+            - build
+
   lint:
-    executor:
-      name: node/default
-      tag: 14.15.3
+    <<: *executor
     steps:
       - checkout
       - node/install-packages
@@ -15,8 +34,23 @@ jobs:
           name: Run lint tasks
           command: npm run lint
 
+  test:
+    <<: *executor
+    steps:
+      - attach_workspace:
+          at: ~/project
+      - run:
+          name: Test built site
+          command: test -f ./public/index.html
+
 workflows:
   version: 2
   default:
     jobs:
-      - lint
+      build:
+        <<: *filters
+      lint:
+        <<: *filters
+      test:
+        <<: *filters
+        requires: build
