@@ -13,7 +13,7 @@ references:
 
 jobs:
   build:
-    <<: *executor
+    executor: *executor
     steps:
       - checkout
       - node/install-packages
@@ -26,7 +26,7 @@ jobs:
             - build
 
   lint:
-    <<: *executor
+    executor: *executor
     steps:
       - checkout
       - node/install-packages
@@ -35,7 +35,7 @@ jobs:
           command: npm run lint
 
   test:
-    <<: *executor
+    executor: *executor
     steps:
       - attach_workspace:
           at: ~/project
@@ -48,9 +48,9 @@ workflows:
   default:
     jobs:
       build:
-        <<: *filters
+        filters: *filters
       lint:
-        <<: *filters
+        filters: *filters
       test:
-        <<: *filters
         requires: build
+        filters: *filters
