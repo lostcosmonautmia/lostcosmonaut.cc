@@ -28,5 +28,4 @@ workflows:
       - lint:
           filters: *filters
       - node/test:
-          parameters:
-            version: *node_version
+          version: *node_version
