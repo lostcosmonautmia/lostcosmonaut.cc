@@ -22,9 +22,7 @@
   "devDependencies": {
     "@11ty/eleventy": "*",
     "@jgarber/eslint-config": "*",
-    "npm-run-all": "*",
-    "stylelint": "*",
-    "stylelint-config-standard": "*",
-    "stylelint-order": "*"
+    "@jgarber/stylelint-config": "*",
+    "npm-run-all": "*"
   }
 }
