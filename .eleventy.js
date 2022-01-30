@@ -1,15 +1,15 @@
-module.exports = eleventy => {
-  eleventy.setBrowserSyncConfig(require('@jgarber/browsersync-config/eleventy'));
+module.exports = eleventyConfig => {
+  eleventyConfig.setBrowserSyncConfig(require('@jgarber/browsersync-config/eleventy'));
 
-  eleventy.addPassthroughCopy('./src/assets');
+  eleventyConfig.addPassthroughCopy('./src/assets');
 
-  eleventy.addPassthroughCopy('./src/apple-touch-icon.png');
-  eleventy.addPassthroughCopy('./src/favicon.ico');
-  eleventy.addPassthroughCopy('./src/icon-256x256.png');
-  eleventy.addPassthroughCopy('./src/icon-384x384.png');
-  eleventy.addPassthroughCopy('./src/icon-512x512.png');
-  eleventy.addPassthroughCopy('./src/manifest.webmanifest');
-  eleventy.addPassthroughCopy('./src/robots.txt');
+  eleventyConfig.addPassthroughCopy('./src/apple-touch-icon.png');
+  eleventyConfig.addPassthroughCopy('./src/favicon.ico');
+  eleventyConfig.addPassthroughCopy('./src/icon-256x256.png');
+  eleventyConfig.addPassthroughCopy('./src/icon-384x384.png');
+  eleventyConfig.addPassthroughCopy('./src/icon-512x512.png');
+  eleventyConfig.addPassthroughCopy('./src/manifest.webmanifest');
+  eleventyConfig.addPassthroughCopy('./src/robots.txt');
 
   return {
     dir: {
