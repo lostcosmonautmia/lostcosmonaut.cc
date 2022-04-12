@@ -2,7 +2,6 @@
   for = "/*"
   [headers.values]
     Content-Security-Policy = "default-src 'self'; frame-ancestors 'none';"
-    X-Frame-Options = "DENY"
 
 [[headers]]
   for = "/favicon.ico"
