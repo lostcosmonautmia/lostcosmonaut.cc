@@ -2,13 +2,15 @@
   for = "/*"
   [headers.values]
     Content-Security-Policy = """\
-      base-uri 'self';\
-      block-all-mixed-content;\
-      default-src 'self';\
-      form-action 'self';\
-      frame-ancestors 'none';\
+      base-uri 'self'; \
+      block-all-mixed-content; \
+      default-src 'self'; \
+      form-action 'self'; \
+      frame-ancestors 'none'; \
       object-src 'none';\
     """
+    X-Frame-Options: "DENY"
+    X-XSS-Protection: "0"
 
 [[headers]]
   for = "/favicon.ico"
