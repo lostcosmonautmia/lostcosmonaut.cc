@@ -12,7 +12,7 @@
       object-src 'none'; \
       script-src 'none'; \
       style-src 'self'; \
-      worker-src 'none'\
+      worker-src 'none';\
     """
     Referrer-Policy = "no-referrer-when-downgrade"
     X-Frame-Options = "DENY"
