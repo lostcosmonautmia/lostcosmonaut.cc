@@ -1,6 +1,4 @@
 module.exports = eleventyConfig => {
-  eleventyConfig.setBrowserSyncConfig(require('@jgarber/browsersync-config/eleventy'));
-
   eleventyConfig.addPassthroughCopy('./src/assets');
 
   eleventyConfig.addPassthroughCopy('./src/apple-touch-icon.png');
