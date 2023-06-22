@@ -2,35 +2,34 @@
 <html lang="en-US">
 <head>
   <meta charset="utf-8">
-
-  {% capture page_title -%}
-    {{ site.name }} — {{ site.tagline }}
-  {% endcapture -%}
-
-  <title>{{ page_title }}</title>
-
-  <meta name="apple-mobile-web-app-title" content="{{ site.name }}">
-  <meta name="application-name" content="{{ site.name }}">
-  <meta name="description" content="{{ site.description }}">
-  <meta name="theme-color" content="{{ site.theme_color }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:creator" content="@jgarber">
-  <meta name="twitter:description" property="og:description" content="{{ site.description }}">
-  <meta name="twitter:image" property="og:image" content="{{ site.url }}/icon-512x512.png">
-  <meta name="twitter:title" property="og:title" content="{{ page_title }}">
-  <meta name="twitter:url" property="og:url" content="{{site.url }}{{ page.url }}">
+  {% capture page_title -%}{{ app.name }} — Musical Instrument Accessories{% endcapture -%}
+
+  <title>{{ page_title }}</title>
 
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/manifest.webmanifest">
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="stylesheet" href="/assets/stylesheets/application.css">
+
+  <meta name="apple-mobile-web-app-title" content="{{ app.name }}">
+  <meta name="application-name" content="{{ app.name }}">
+  <meta name="description" content="{{ app.description }}">
+  <meta name="theme-color" content="{{ app.theme_color }}">
+
+  <meta property="og:author_name" content="{{ pkg.author.name }}">
+  <meta property="og:author_url" content="{{ pkg.author.url }}">
+  <meta property="og:description" content="{{ app.description }}">
+  <meta property="og:image" content="{{ app.start_url }}/icon-512x512.png">
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:url" content="{{ app.start_url }}{{ page.url }}">
+
 </head>
 <body>
 
   <a href="/" rel="home" class="h-card">
-    <img src="/assets/images/badge.png" alt="{{ site.name }}">
+    <img src="/assets/images/badge.png" alt="{{ app.name }}">
   </a>
 
 </body>
