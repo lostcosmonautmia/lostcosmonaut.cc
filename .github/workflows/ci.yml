@@ -26,7 +26,7 @@ jobs:
       - run: npm ci
       - run: npm test
   deploy:
-    name: Deploy site to Cloudflare Pages
+    name: Deploy to Cloudflare Pages
     permissions:
       contents: read
       deployments: write
