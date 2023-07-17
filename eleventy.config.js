@@ -4,7 +4,7 @@ module.exports = function(eleventyConfig) {
 
   // Passthrough File Copy
   eleventyConfig
-    .addPassthroughCopy('./src/_headers')
+    .addPassthroughCopy('./src/_{headers,redirects}')
     .addPassthroughCopy('./src/*.{ico,png,svg,txt}')
     .addPassthroughCopy('./src/assets')
     .addPassthroughCopy({
