@@ -1,6 +1,6 @@
 name: CI
 
-on: push
+on: [push, workflow_dispatch]
 
 jobs:
   lint:
@@ -35,6 +35,9 @@ jobs:
       - test
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-20.04
+    environment:
+      name: lost-cosmonaut-cc (Production)
+      url: https://lostcosmonaut.cc
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
