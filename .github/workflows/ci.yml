@@ -36,7 +36,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-20.04
     environment:
-      name: lost-cosmonaut-cc (Production)
+      name: lostcosmonaut-cc (Production)
       url: https://lostcosmonaut.cc
     steps:
       - uses: actions/checkout@v3
@@ -52,4 +52,4 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           directory: _site
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          projectName: lost-cosmonaut-cc
+          projectName: lostcosmonaut-cc
