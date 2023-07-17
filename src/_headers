@@ -5,7 +5,6 @@
 
 /
   Content-Security-Policy: base-uri 'self'; default-src 'none'; img-src 'self'; manifest-src 'self'; style-src 'self';
-  Link: </assets/stylesheets/application.css>; rel="preload"; as="style"
 
 /favicon.ico
   Content-Type: image/x-icon
