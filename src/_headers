@@ -4,7 +4,7 @@
   X-XSS-Protection: 0
 
 /
-  Content-Security-Policy: base-uri 'self'; default-src 'none'; img-src 'self'; style-src 'self';
+  Content-Security-Policy: base-uri 'self'; default-src 'none'; img-src 'self'; manifest-src 'self'; style-src 'self';
 
 /favicon.ico
   Content-Type: image/x-icon
