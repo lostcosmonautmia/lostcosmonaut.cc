@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "@jgarber/eslint-config": "^4.2.1",
+    "@jgarber/eslint-config": "^4.3.0",
     "@jgarber/stylelint-config": "^4.0.0"
   }
 }
