@@ -12,19 +12,6 @@
   },
   "repository": "github:lostcosmonautmia/lostcosmonaut.cc",
   "scripts": {
-    "build": "eleventy --quiet",
-    "clean": "rm -rf public",
-    "lint": "npm run lint:css && npm run lint:js",
-    "lint:css": "stylelint ./src/**/*.css",
-    "lint:js": "eslint .",
-    "prebuild": "npm run clean",
-    "pretest": "npm run build",
-    "start": "npm run build -- --serve",
-    "test": "test -f ./_site/index.html"
-  },
-  "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "@jgarber/eslint-config": "^5.0.0",
-    "@jgarber/stylelint-config": "^4.0.0"
+    "start": "npx http-server ./src"
   }
 }
