@@ -17,10 +17,8 @@ jobs:
       url: https://lostcosmonaut.cc
     steps:
       - uses: actions/checkout@v4
-      - uses: cloudflare/pages-action@v1
+      - uses: cloudflare/wrangler-action@v3
         with:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          directory: src
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          projectName: lostcosmonaut-cc
+          command: pages deploy src --project-name=lostcosmonaut-cc
