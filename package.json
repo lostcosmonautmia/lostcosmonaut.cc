@@ -5,11 +5,7 @@
   "homepage": "https://github.com/lostcosmonautmia/lostcosmonaut.cc",
   "bugs": "https://github.com/lostcosmonautmia/lostcosmonaut.cc/issues",
   "license": "CC-BY-NC-SA-4.0",
-  "author": {
-    "name": "Jason Garber",
-    "email": "jason@sixtwothree.org",
-    "url": "https://sixtwothree.org"
-  },
+  "author": "Jason Garber <jason@sixtwothree.org> (https://sixtwothree.org)",
   "repository": "github:lostcosmonautmia/lostcosmonaut.cc",
   "scripts": {
     "start": "npx http-server ./src"
